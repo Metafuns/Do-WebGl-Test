@@ -30,13 +30,20 @@
                 현재 더 나은 서비스를 위해 작업 중입니다.<br />
                 곧 멋진 모습으로 다시 찾아뵙겠습니다!
             </p>
+            <div style="margin-top: 15px;">
+                <a href="./index/index.html" style="background: #ffd700; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px;">구경하기</a>
+            </div>
         </div>
     </div>
 
     <script>
-        // Close popup
-        document.getElementById('closePopup').addEventListener('click', function() {
-            document.getElementById('popup').style.display = 'none';
+        document.addEventListener('DOMContentLoaded', function() {
+            // Close popup
+            document.getElementById('popup').addEventListener('click', function(e) {
+                if (e.target.id === 'popup') {
+                    document.getElementById('popup').style.display = 'none';
+                }
+            });
         });
     </script>
 
