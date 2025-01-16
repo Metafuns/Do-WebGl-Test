@@ -1,46 +1,90 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Example</title>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
-</head>
-<body>
-  <section class="center">
-    <aside class="sidebar"></aside>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">   
     
-    <section class="contents">
-      <!-- page will be include here -->
-      <section id="page" class="page">
-        <section id="about">
-          <section class="frame">
-            <h2><b>HELLO</b>WORLD</h2>
-            
-            <div class="cat">
-              <div class="picture">
-                <img src="images/mew.png" alt="Mew">
-              </div>
-              <small>Mew</small>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/swiper/css/swiper.css">
+
+    <!-- script -->
+    <script src="./assets/scripts/jquery-3.1.1.min.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/swiper/js/swiper.js"></script>
+    
+</head>
+<body style="background: #dff6ff;">
+    <!-- Popup -->
+    <div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 1000;">
+        <div style="background: white; padding: 20px; border-radius: 10px; text-align: center; width: 80%; max-width: 400px;">
+            <h2 style="color: #333;">🎉 홈페이지 리뉴얼 중 🎉</h2>
+            <p style="color: #666; margin: 10px 0;">
+                현재 더 나은 서비스를 위해 작업 중입니다.<br />
+                곧 멋진 모습으로 다시 찾아뵙겠습니다!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Close popup
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
+
+    <header style="background: #dff6ff;">
+        <div class="wrap">
+            <div class="header_left">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./assets/images/logo_b.svg" alt="">
+                    </a>
+                </div>
             </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/siesta.png" alt="Siesta">
-              </div>
-              <small>Siesta</small>
+            <div class="header_right">
+                <div class="login_after">
+                    <div class="btn">
+                        <a href="./login.html" class="btn_line">로그인</a>
+                    </div>
+                    <div class="btn">
+                        <a href="./sign_up.html" class="btn_yellow">가입하기</a>                        
+                    </div>
+                </div>
             </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/tiger.png" alt="Tiger">
-              </div>
-              <small>Tiger</small>
+        </div>
+    </header>
+    <div class="content">
+        <div class="wrap">
+            <div class="main">
+                <div class="main_con">
+                    <div class="txt">
+                        <h2>
+                            창의적인 수업을 위한<br/>
+                            완벽한 도구, Do.                            
+                        </h2>
+                        <p>나만의 교육 게임으로 즐겁고 효과적인 수업을 만들어보세요!</p>
+                        <div class="btn">
+                            <a href="./sign_up.html" class="btn_yellow">가입하기</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </section>
-        </section>
-      </section>
-    </section>
-  </section>
+        </div>
+        <div class="main_img">
+            <img class="pc_only" src="./assets/images/main.png" style="width: 100%;" alt="">
+            <img class="mo_only" src="./assets/images/main_mo.png" style="width: 100%;" alt="">
+        </div>
+    </div>
+    <footer>
+
+    </footer>
 </body>
 </html>
